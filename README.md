@@ -1,1 +1,0 @@
-# SYCMS-sql
